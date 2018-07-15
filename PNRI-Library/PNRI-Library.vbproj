@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4ED833C5-ECCE-440C-8883-E08B95F919C1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>PNRI_Library.My.MyApplication</StartupObject>
+    <RootNamespace>PNRI_Library</RootNamespace>
+    <AssemblyName>PNRI-Library</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>PNRI-Library.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>PNRI-Library.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Desktop\Installers\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add Staff.Designer.vb">
+      <DependentUpon>Add Staff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Add Staff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBorrower.Designer.vb">
+      <DependentUpon>AddBorrower.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddBorrower.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowersList.Designer.vb">
+      <DependentUpon>BorrowersList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowersList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowForm.Designer.vb">
+      <DependentUpon>BorrowForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connection\Class_Connection.vb" />
+    <Compile Include="DashboardForm.Designer.vb">
+      <DependentUpon>DashboardForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Entity_Access.vb" />
+    <Compile Include="Entities\Entity_Borrowers.vb" />
+    <Compile Include="Entities\Entity_Catalog.vb" />
+    <Compile Include="Entities\Entity_Login.vb" />
+    <Compile Include="Entities\Entity_Staff.vb" />
+    <Compile Include="Functions\Function_Borrowers.vb" />
+    <Compile Include="Functions\Function_Borrowing.vb" />
+    <Compile Include="Functions\Function_Catalog.vb" />
+    <Compile Include="Functions\Function_Dashboard.vb" />
+    <Compile Include="Functions\Function_Home.vb" />
+    <Compile Include="Functions\Function_Login.vb" />
+    <Compile Include="Functions\Function_Records.vb" />
+    <Compile Include="Functions\Function_Returning.vb" />
+    <Compile Include="Functions\Function_Staffs.vb" />
+    <Compile Include="HomeForm.Designer.vb">
+      <DependentUpon>HomeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HomeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialForm.Designer.vb">
+      <DependentUpon>MaterialForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entities\Entity_User.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RecordForm.Designer.vb">
+      <DependentUpon>RecordForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RecordForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnForm.Designer.vb">
+      <DependentUpon>ReturnForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Forms.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Add Staff.resx">
+      <DependentUpon>Add Staff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddBorrower.resx">
+      <DependentUpon>AddBorrower.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowersList.resx">
+      <DependentUpon>BorrowersList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowForm.resx">
+      <DependentUpon>BorrowForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardForm.resx">
+      <DependentUpon>DashboardForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeForm.resx">
+      <DependentUpon>HomeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialForm.resx">
+      <DependentUpon>MaterialForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordForm.resx">
+      <DependentUpon>RecordForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnForm.resx">
+      <DependentUpon>ReturnForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
